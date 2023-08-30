@@ -1,0 +1,557 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1"
+     xml:base="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-11="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#did_test -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#did_test">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <rdfs:comment>test svolto da un paziente</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#has_question -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#has_question">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Age">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment>Età del paziente</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#CompilatoreTest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#CompilatoreTest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Etnia -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Etnia">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>F</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>M</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#IdPaziente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#IdPaziente">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#IdTest -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#IdTest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Ittero -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Ittero">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Paziente nato con ittero</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#NumQuestion -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#NumQuestion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#PDDparent -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#PDDparent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Parenti con PDD</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Risposta -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#Risposta">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#isAutistic -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#isAutistic">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <untitled-ontology-11:did_test rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test1"/>
+        <untitled-ontology-11:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</untitled-ontology-11:Age>
+        <untitled-ontology-11:Etnia>Caucasica</untitled-ontology-11:Etnia>
+        <untitled-ontology-11:Gender>M</untitled-ontology-11:Gender>
+        <untitled-ontology-11:IdPaziente rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01AB</untitled-ontology-11:IdPaziente>
+        <untitled-ontology-11:Ittero rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Ittero>
+        <untitled-ontology-11:PDDparent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:PDDparent>
+        <untitled-ontology-11:isAutistic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:isAutistic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <untitled-ontology-11:did_test rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test2"/>
+        <untitled-ontology-11:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">12</untitled-ontology-11:Age>
+        <untitled-ontology-11:Etnia rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asiatica</untitled-ontology-11:Etnia>
+        <untitled-ontology-11:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</untitled-ontology-11:Gender>
+        <untitled-ontology-11:IdPaziente rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0102BC</untitled-ontology-11:IdPaziente>
+        <untitled-ontology-11:Ittero rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Ittero>
+        <untitled-ontology-11:PDDparent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:PDDparent>
+        <untitled-ontology-11:isAutistic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:isAutistic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+        <untitled-ontology-11:did_test rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test3"/>
+        <untitled-ontology-11:Age rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">17</untitled-ontology-11:Age>
+        <untitled-ontology-11:Etnia rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afro</untitled-ontology-11:Etnia>
+        <untitled-ontology-11:Gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</untitled-ontology-11:Gender>
+        <untitled-ontology-11:IdPaziente rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0201FG</untitled-ontology-11:IdPaziente>
+        <untitled-ontology-11:Ittero rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Ittero>
+        <untitled-ontology-11:PDDparent rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:PDDparent>
+        <untitled-ontology-11:isAutistic rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:isAutistic>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">10</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">10</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">1</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">3</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">4</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">5</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">6</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">7</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">8</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">9</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+        <untitled-ontology-11:NumQuestion rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">9</untitled-ontology-11:NumQuestion>
+        <untitled-ontology-11:Risposta rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</untitled-ontology-11:Risposta>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_true"/>
+        <untitled-ontology-11:CompilatoreTest>Family member</untitled-ontology-11:CompilatoreTest>
+        <untitled-ontology-11:IdTest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0101AB</untitled-ontology-11:IdTest>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_true"/>
+        <untitled-ontology-11:CompilatoreTest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health Care Professional</untitled-ontology-11:CompilatoreTest>
+        <untitled-ontology-11:IdTest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0101BC</untitled-ontology-11:IdTest>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest10_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest1_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest2_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest3_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest4_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest5_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest6_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest7_false"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest8_true"/>
+        <untitled-ontology-11:has_question rdf:resource="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#quest9_true"/>
+        <untitled-ontology-11:CompilatoreTest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Family member</untitled-ontology-11:CompilatoreTest>
+        <untitled-ontology-11:IdTest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1404FG</untitled-ontology-11:IdTest>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#domanda"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#paziente"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/iConDM/ontologies/2023/08/untitled-ontology-1#test"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
